@@ -10,6 +10,8 @@ import { BookstoreAppComponent } from './components/bookstore-app/bookstore-app.
 import { FiltersComponent } from './components/filters/filters.component';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { ProductItemComponent } from './components/list-products/product-item/product-item.component';
+import { BookService } from './components/list-products/product-item/product-list.component.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,10 @@ import { ProductItemComponent } from './components/list-products/product-item/pr
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
